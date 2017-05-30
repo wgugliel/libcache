@@ -6,7 +6,7 @@
 
 
 int main() {
-  cache_t *cache = cache_new(3);
+  cache_t cache = cache_new(3);
   long e;
 
   e = 0;
@@ -48,6 +48,10 @@ int main() {
   assert(cache_contains(cache, &e, sizeof(e)) == CACHE_CONTAINS_TRUE);
   e = 4;
   assert(cache_contains(cache, &e, sizeof(e)) == CACHE_CONTAINS_TRUE);
+  // e = 5;
+  // assert(cache_add(cache, &e, sizeof(e)) == CACHE_NO_ERROR);
+  // e = 1;
+  // assert(cache_contains(cache, &e, sizeof(e)) == CACHE_CONTAINS_FALSE);
 
   for(e = 0; e < 1000; e++) {
     assert(cache_add(cache, &e, sizeof(e)) == CACHE_NO_ERROR);
