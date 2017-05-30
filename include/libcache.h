@@ -21,7 +21,7 @@ typedef enum cache_result {
   CACHE_CONTAINS_TRUE,        /**< Returned by function cache_contains if item is present. */
   CACHE_INVALID_INPUT,        /**< Returned by a function if it is called with invalid input parameters. */
   CACHE_REMOVE_NOT_FOUND,     /**< Returned by function cache_remove if item is not present. */
-  CACHE_MALLOC_ERROR          /**< Returned by a function if a malloc fail. */
+  CACHE_MALLOC_FAIL           /**< Returned by a function if a malloc fail. */
 } cache_result;
 
 
